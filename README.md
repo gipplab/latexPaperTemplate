@@ -11,3 +11,7 @@ This repository serves as a template for LaTeX papers. And guides you to the pro
 1) Format shorten and submit
 1) Get the preprint
 1) submit to arxiv and archive the repo
+
+## Get the preprint
+
+After your paper was accepted, the first author should carefully review the step-by-step instrunctions in the [wiki](https://isgroup.atlassian.net/wiki/spaces/ISG/pages/2818051/After+your+Paper+was+Accepted+Publishing+a+Paper+on+our+Website)

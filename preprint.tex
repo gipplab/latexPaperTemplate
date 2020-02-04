@@ -1,0 +1,36 @@
+% This is the preprint template.
+% Check the out the preprint process on
+% https://isgroup.atlassian.net/wiki/spaces/ISG/pages/2818051/After+your+Paper+was+Accepted+Publishing+a+Paper+on+our+Website
+% before editing this file.
+% If you can not access the wikipage talk to Moritz (current contact information on moritzschubotz.de).
+\documentclass{article}
+\RequirePackage{filecontents}
+\PassOptionsToPackage{dvipsnames}{xcolor}
+\RequirePackage{comgipp}
+\RequirePackage{amsfonts}
+\RequirePackage{amsmath}
+\RequirePackage{authblk}
+\begin{filecontents*}{references.bib}
+@inproceedings{LastnameYYYY,
+  author    = {Only list authors who have commited to contribute
+  significantly to this research project},
+  title        = {Put a temporary title here},
+  booktitle    = {Proceedings of The Web Conference 2020 (WWW '20), April 20--24, 2020, Taipei, Taiwan},
+  doi          = {10.1145/3366423.3380218}
+}
+\end{filecontents*}
+%TODO Update the following line whenever you change the key of the bibtex entry (currently LastnameYYYY) above.
+\newcommand{\theReferenceText}{\fullcite{LastnameYYYY}}
+% Change title header.tex please.
+\input{header.tex}
+% Change authors in authorsblk.tex for the preprint please.
+\input{authblk.tex}
+% Note that each template has very specific requirements on author formatting.
+\begin{document}
+  \maketitle
+  \thispagestyle{firststyle}
+  \begin{abstract}
+    \input{abstract.tex}
+  \end{abstract}
+\input{mainmatter.tex}
+\end{document}
