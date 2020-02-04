@@ -1,6 +1,20 @@
-language: ruby
-rvm:
-- 2.0.0
-- 1.9.3
-- jruby-19mode
-- rbx-2
+services:
+- docker
+script:
+- bin/travis
+- export GIT_TAG=paper-$TRAVIS_BRANCH-$(date -u "+%m-%d")-r$TRAVIS_BUILD_NUMBER
+after_success:
+- git config --global user.email "builds@travis-ci.com"
+- git config --global user.name "Travis CI"
+- echo -n $GIT_TAG > version
+- git commit -m "Set build VERSION number" version
+- git tag $GIT_TAG -a -m "Generated tag from TravisCI build $TRAVIS_BUILD_NUMBER"
+branches:
+  except:
+  - "/^paper-[0-9a-z\\-]*/"
+deploy:
+  provider: releases
+  skip_cleanup: true
+  file_glob: true
+  file:
+  - rel/*
