@@ -1,7 +1,7 @@
 services:
 - docker
 script:
-- bin/travis
+- source bin/travis
 - export GIT_TAG=paper-$TRAVIS_BRANCH-$(date -u "+%m-%d")-r$TRAVIS_BUILD_NUMBER
 after_success:
 - git config --global user.email "builds@travis-ci.com"
@@ -14,8 +14,6 @@ branches:
   - "/^paper-[0-9a-z\\-]*/"
 deploy:
   provider: releases
-  api_key:
-    secure: RvznD+EhCimzpikE+WB5Hiyuge8Vfe2Wy6t81Z1M5CK0jerJOAG+wzXy1BomJ4UOPRgzSb46YQfBRTSaE2QhNjMPnjfYh06TB/v5q9xEJTtExifEJ5cZmXkD1/6kce0Ro3YUzraR1brtZdd+xGH2PMOw+1FXre80TFAMSFIn4JqOd1C1oNxCjdF2pw8kQs0RpsOTTjO9grE3ivUazYO2iQHPIOY6OyEQLjP9ox3WSh6izcU0H+qosHRM6frdTZGGfWEFiyefs+pRmlHviNrPef5Sdz2SfG+Oe+VOUqUKVg0yGvXYi+XqoL8WNddjwBgT24G8JMex+4xrt0wPbyFX1+7Czrd6k8o2kYrX2JVbV3CUPmYYGUDAEcMyKIzTTb53XWcFTU2w73UVxwsm3alJpck/arRtA+/LlqQQ3FkPZG5+NiRv10HNXKA3B5KAMDC/9Ll2Te8NB+lxM1JA2YuuLSXv+elgpYTtXRBNZL9Y5PBpfY5qFgqdEBw4nEG9fYhg3H5wFdgSknF4qfpYvjEYHqkpxqmIDTI1Fs6RsU+8AlUWCYPC19PjSrIlTRfUtKgstU6iKUVv9553Lf13lIEK0LRY8R28y87jOgw2winRh5vkJ9Qn+UfUUSettnyAme+h+Ix6FhWV9ZHqHlpWri9VPtSREv2lQeOb7wPwA+4RJAw=
   skip_cleanup: true
   file_glob: true
   file:
