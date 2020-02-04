@@ -1,0 +1,13 @@
+#!/bin/bash
+echo "Start travis jobs!"
+mkdir rel
+bin/arxiv &
+bin/word &
+bin/spellcheck &
+echo "Wait for all jobs to finish"
+wait
+cp preprint.pdf rel
+cp preprint.log rel
+cp arxiv.tar.gz rel
+cp main.docx rel
+cp spellcheck.html rel
