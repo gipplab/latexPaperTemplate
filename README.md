@@ -15,3 +15,6 @@ This repository serves as a template for LaTeX papers. And guides you to the pro
 ## Get the preprint
 
 After your paper was accepted, the first author should carefully review the step-by-step instrunctions in the [wiki](https://isgroup.atlassian.net/wiki/spaces/ISG/pages/2818051/After+your+Paper+was+Accepted+Publishing+a+Paper+on+our+Website)
+
+## Further reading
+* https://isgroup.atlassian.net/wiki/spaces/ISG/pages/16613454/Write+the+Paper
