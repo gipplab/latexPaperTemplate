@@ -1,0 +1,3 @@
+#!/bin/bash
+echo "Generating the spellcheck file"
+docker run --rm --volume "`pwd`:/data" --user `id -u`:`id -g` aggipp/textidote --output html preprint.tex > spellcheck.html
