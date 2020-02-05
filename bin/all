@@ -1,0 +1,16 @@
+#!/bin/bash
+mkdir rel
+echo "Start all compile jobs in parallel"
+bin/arxiv &
+bin/word &
+bin/spellcheck &
+bin/acm &
+echo "Wait for all jobs to finish"
+wait
+echo "Export release files"
+cp preprint.pdf rel
+cp preprint.log rel
+cp arxiv.tar.gz rel
+cp main.docx rel
+cp spellcheck.html rel
+cp acm.pdf rel
