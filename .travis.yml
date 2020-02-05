@@ -18,3 +18,4 @@ deploy:
   file_glob: true
   file:
   - rel/*
+  edge: true
