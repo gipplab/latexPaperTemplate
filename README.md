@@ -23,7 +23,7 @@ If you just created this repository please consider [deleting it.](https://help.
 Here `YY` is the year of the publication, `Conf` is the Camel-case acronym of the confierence, e.g, `Jcdl,` `Sigir,` or `Neurips.`
 `Topic` is a descriptive word for your paper projekt to distinguish it from other papers from the group submitted to the same conference.
 You can update the name later, especially if you decide to change the conference.
-1) Generate a github token to enable the automated features of this repository, like the creation of PDF, spellchecking or conversion to a word document.
+1) Generate a [github token](https://help.github.com/en/github/authenticating-to-github/creating-a-personal-access-token-for-the-command-line#creating-a-token) and check the repo permissions (the first group). This enables automated features of this repository, like the creation of PDF, spellchecking or conversion to a word document.
 1) Set up the `GITHUB_TOKEN` on [travis.](travis-ci.com) Log in to travis and identify the newly created repository. From the repository go to `More options` -> `Settings`. Eventually you should end up at the following URL `https://travis-ci.com/ag-gipp/YYConfTopic/settings,` where `YYConfTopic` is your repo name as described above. In the section `Environment Variables` create a new variable and past the token you generated in the last step.
 
 ## Get the preprint
