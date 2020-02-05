@@ -1,4 +1,8 @@
 #!/bin/bash
+if [[ -z "${GITHUB_TOKEN}" ]]; then
+    echo "ERROR GITHUB_TOKEN not set. Please consult the README.MD file"
+    exit 1
+fi
 echo "Start travis jobs!"
 mkdir rel
 bin/arxiv &
@@ -6,6 +10,7 @@ bin/word &
 bin/spellcheck &
 echo "Wait for all jobs to finish"
 wait
+echo "Export release files"
 cp preprint.pdf rel
 cp preprint.log rel
 cp arxiv.tar.gz rel
