@@ -30,7 +30,23 @@ You can update the name later, especially if you decide to change the conference
 Take a moment to review the permissions and settings of your new repo. Invite collaborators that are on github. Contact other collaborators and ask for their GitHub account names. Also link the newly created repository from the corresponding issue in [JIRA](https://isgroup.atlassian.net/secure/RapidBoard.jspa?rapidView=53&projectKey=MPE&view=planning.nodetail&issueLimit=100) and to the [Confluence page.](https://isgroup.atlassian.net/wiki/spaces/ISG/pages/54912991)
 
 ## 3) Create a work-plan and distribute tasks
-After having invited all collaborators to the repository make a work plan, e.g. using github issues. Make sure to schedule the 
+After having invited all collaborators to the repository make a work plan, e.g. using github issues. Make sure to schedule the work ahead. Discuss with your collaborators the distribution of the workload. Only a significiant contribution warrents the co-authorship on the paper. It is the job of the first author to manage all coauthors and to ensure that everyone contributes their fair share to the project.
+
+## 4) Document your research to allow for greater reproducibility
+
+You can use this GitHub Repository to document your daily progress on the research project. Just create a folder called log and create a plaintext or markdown file. Before you stop working on the project document the most important steps you did. Copy and paste locations and commands you used during your research including links to help pages and screenshots. Spending 5 minutes prior to leaving might save 1 hour the next day.
+
+1) Select templates and plan paper outline
+
+1) Write the paper collaboratively on GitHub
+
+1) Get your paper proofread
+
+1) Format shorten and submit
+
+1) Get the preprint
+
+1) submit to arxiv and archive the repo
 ## Get the preprint
 
 After your paper was accepted, the first author should carefully review the step-by-step instrunctions in the [wiki](https://isgroup.atlassian.net/wiki/spaces/ISG/pages/2818051/After+your+Paper+was+Accepted+Publishing+a+Paper+on+our+Website)
