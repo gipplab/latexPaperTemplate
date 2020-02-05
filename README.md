@@ -26,8 +26,8 @@ Basic steps are
 
 10. submit to arxiv and archive the repo
 
-1) Set up and rename the repository
------------------------------------
+## 1) Set up and rename the repository
+
 
 To start a new LaTeX paper project, do the following:
 
@@ -73,18 +73,16 @@ Also, link the newly created repository from the corresponding issue in
 [JIRA](https://isgroup.atlassian.net/secure/RapidBoard.jspa?rapidView=53&projectKey=MPE&view=planning.nodetail&issueLimit=100)
 and to the [Confluence page.](https://isgroup.atlassian.net/wiki/spaces/ISG/pages/54912991)
 
-3) Create a work-plan and distribute tasks
-------------------------------------------
+## 3) Create a work-plan and distribute tasks
 
 After having invited all collaborators to the repository make a work plan, e.g.
-using Github issues. Make sure to schedule the work ahead. Discuss with your
-collaborators the distribution of the workload. Only a significant contribution
-warrants the co-authorship on the paper. It is the job of the first author to
-manage all coauthors and to ensure that everyone contributes their fair share to
-the project.
+using Github issues.
+Make sure to schedule the work ahead.
+Discuss with your collaborators the distribution of the workload.
+Only a significant contribution warrants the co-authorship on the paper.
+It is the job of the first author to manage all coauthors and to ensure that everyone contributes their fair share to the project.
 
-4) Document your research to allow for greater reproducibility
---------------------------------------------------------------
+## 4) Document your research to allow for greater reproducibility
 
 You can use this GitHub Repository to document your daily progress on the
 research project. Just create a folder called log and create a plaintext or
@@ -93,41 +91,37 @@ critical steps you did. Copy and paste locations and commands you used during
 your research including links to help pages and screenshots. Spending 5 minutes
 before leaving might save 1 hour the next day.
 
-5) Select templates and plan paper outline
-------------------------------------------
+## 5) Select templates and plan paper outline
 
 Consult the conference website on the requirements regarding formatting. Decide
 if you are heading for a long or a short paper. Plan the length of the sections
 individually
 
-6) Write the paper collaboratively on GitHub
---------------------------------------------
+## 6) Write the paper collaboratively on GitHub
+
 
 If multiple co-authors are contributing to the document text it might be most
 convenient to split the paper into different files so that each coauthor works
 on its own file. Otherwise, only the first author should do changes to the
 repository. Other co-authors should use pull-request to submit changes.
 
-7) Get your paper proofread
----------------------------
+## 7) Get your paper proofread
 
 Be sure to get your paper proofread at least one week prior to the submission
 deadline. See the hints in the wiki.
 
-8) Format shorten and submit
--------------------------
+## 8) Format shorten and submit
 
 Plan one day to format and shorten the paper. Be sure to commit regularly so
 that you can revert changes if something goes wrong. After you are done with
 reformatting, ensure alk your coauthors to review the paper again before
 submission.
 
-9) Get the preprint
-----------------
+## 9) Get the preprint
 
 After your paper was accepted, the first author should carefully review the
 step-by-step instructions in the
 [wiki](https://isgroup.atlassian.net/wiki/spaces/ISG/pages/2818051/After+your+Paper+was+Accepted+Publishing+a+Paper+on+our+Website)
 
-10) submit to arxiv and archive the repo
-------------------------------------
+## 10) submit to arxiv and archive the repo
+
