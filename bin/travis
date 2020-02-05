@@ -1,4 +1,8 @@
 #!/bin/bash
+if [[ -z "${GITHUB_TOKEN}" ]]; then
+    echo "ERROR GITHUB_TOKEN not set. Please consult the README.MD file"
+    exit 1
+fi
 echo "Start travis jobs!"
 mkdir rel
 bin/arxiv &
@@ -12,7 +16,3 @@ cp preprint.log rel
 cp arxiv.tar.gz rel
 cp main.docx rel
 cp spellcheck.html rel
-if [[ -v CI ]]; then
-	git clone git@github.com:ag-gipp/bibBotKey.git /tmp/bibkey
-	api_key=$(< /tmp/bibkey/key)
-fi
