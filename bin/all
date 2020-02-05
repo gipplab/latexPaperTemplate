@@ -5,6 +5,7 @@ bin/arxiv &
 bin/word &
 bin/spellcheck &
 bin/acm &
+bin/llncs &
 echo "Wait for all jobs to finish"
 wait
 echo "Export release files"
@@ -14,3 +15,4 @@ cp arxiv.tar.gz rel
 cp main.docx rel
 cp spellcheck.html rel
 cp acm.pdf rel
+cp llncs.pdf rel

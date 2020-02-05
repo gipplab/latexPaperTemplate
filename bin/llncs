@@ -1,0 +1,3 @@
+#!/bin/bash
+echo "Generating the acm PDF"
+docker run --rm --volume "`pwd`:/data" --user `id -u`:`id -g` --entrypoint=/usr/local/texlive/bin/x86_64-linux/latexmk aggipp/arxiv-collector -pdf llncs.tex
