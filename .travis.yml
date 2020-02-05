@@ -14,7 +14,8 @@ branches:
   - "/^paper-[0-9a-z\\-]*/"
 deploy:
   provider: releases
-  skip_cleanup: true
+  cleanup: false
   file_glob: true
   file:
   - rel/*
+  edge: true
