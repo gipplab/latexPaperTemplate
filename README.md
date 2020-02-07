@@ -63,7 +63,7 @@ Change the title of the paper in the file
 [header.tex](/header.tex).
 If you set up the environment variables correctly, the PDF, Word and Spellcheck document should appear in about 5 minutes after the change as
 [release](https://help.github.com/en/github/administering-a-repository/viewing-your-repositorys-tags).
-
+1) Retrigger the initial build and ensure that the build passes. You should see the first release in the releases section.
 ## 2) Manage collaborators, permissions and links to the repository
 
 Take a moment to review the permissions and settings of your new repo.
