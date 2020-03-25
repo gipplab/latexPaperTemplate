@@ -85,7 +85,7 @@ It is the job of the first author to manage all coauthors and to ensure that eve
 ## 4) Document your research to allow for greater reproducibility
 
 You can use this GitHub Repository to document your daily progress on the
-research project. Just create a folder called log and create a plaintext or
+research project. For example, create a folder called _log_ and create a plaintext or
 markdown file. Before you stop working on the project, document the most
 critical steps you did. Copy and paste locations and commands you used during
 your research including links to help pages and screenshots. Spending 5 minutes
@@ -114,7 +114,7 @@ deadline. See the hints in the wiki.
 
 Plan one day to format and shorten the paper. Be sure to commit regularly so
 that you can revert changes if something goes wrong. After you are done with
-reformatting, ensure alk your coauthors to review the paper again before
+reformatting, ensure that all your coauthors review the paper before
 submission.
 
 ## 9) Get the preprint

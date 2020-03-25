@@ -3,4 +3,4 @@ if [[ -z "${GITHUB_TOKEN}" ]]; then
     echo "ERROR GITHUB_TOKEN not set. Please consult the README.MD file"
     exit 1
 fi
-bin/all
+source bin/all
