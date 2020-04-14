@@ -1,7 +1,7 @@
 services:
 - docker
 script:
-- bin/travis
+- source bin/travis
 - export GIT_TAG=paper-$TRAVIS_BRANCH-$(date -u "+%m-%d")-r$TRAVIS_BUILD_NUMBER
 after_success:
 - git config --global user.email "builds@travis-ci.com"
