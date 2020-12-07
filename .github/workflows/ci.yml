@@ -13,6 +13,8 @@ jobs:
         uses: actions/checkout@v2
       - name: Build all versions
         run: source ./bin/travis
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
       - name: Get current branch name
         id: extract_branch_name
         run: echo "##[set-output name=branch;]$(echo ${GITHUB_REF#refs/heads/})"
