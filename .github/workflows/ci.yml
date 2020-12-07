@@ -11,9 +11,10 @@ jobs:
     steps:
       - name: Checkout repo
         uses: actions/checkout@v2
-      - name: Build all versions
+      - name: Caching docker
         uses: satackey/action-docker-layer-caching@v0.0.10
         continue-on-error: true
+      - name: Build all versions
         run: source ./bin/travis
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
