@@ -12,6 +12,8 @@ jobs:
       - name: Checkout repo
         uses: actions/checkout@v2
       - name: Build all versions
+        uses: satackey/action-docker-layer-caching@v0.0.10
+        continue-on-error: true
         run: source ./bin/travis
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
