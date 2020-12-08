@@ -26,7 +26,7 @@ jobs:
         run: echo "::set-output name=date::$(echo $(date -u '+%m-%d'))"
       - name: Build tag id
         id: build_tag
-        run: echo "::set-output name=tag::$(echo 'paper-${{ steps.extract_branch_name.outputs.branch }}-${{ steps.current_date.outputs.date }}-r$GITHUB_RUN_ID')"
+        run: echo "::set-output name=tag::$(echo 'paper-${{ steps.extract_branch_name.outputs.branch }}-${{ steps.current_date.outputs.date }}-r${GITHUB_RUN_ID}')"
       - name: Verify generated tag
         run: echo "${{ steps.build_tag.outputs.tag }}"
       - name: Upload release assets
