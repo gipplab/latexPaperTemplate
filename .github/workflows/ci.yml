@@ -26,9 +26,9 @@ jobs:
         run: echo "::set-output name=date::$(echo $(date -u '+%m-%d'))"
       - name: Build tag id
         id: build_tag
-        run: |
-          echo "::debug::Build a tag with branch name ${{ steps.extract_branch_name.branch }} and date ${{ steps.current_date.date }}"
-          echo "::set-output name=tag::$(echo paper-${{ steps.extract_branch_name.branch }}-${{ steps.current_date.date }}-r$GITHUB_RUN_ID)"
+        run: echo "::set-output name=tag::$(echo 'paper-${{ steps.extract_branch_name.branch }}-${{ steps.current_date.date }}-r$GITHUB_RUN_ID')"
+      - name: Verify generated tag
+        run: echo "${{ steps.build_tag.tag }}"
       - name: Upload release assets
         uses: svenstaro/upload-release-action@v2
         with:
