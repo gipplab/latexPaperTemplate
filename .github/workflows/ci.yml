@@ -7,7 +7,7 @@ on:
 
 jobs:
   deploy:
-    runs-on: dke
+    runs-on: self-hosted
     steps:
       - name: Checkout repo
         uses: actions/checkout@v2
