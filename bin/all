@@ -8,9 +8,11 @@ source bin/acm
 source bin/llncs
 
 echo "Export release files"
-cp preprint.pdf rel
-cp preprint.log rel
+cp llncs_preprint.pdf rel
+cp llncs_preprint.log rel
 cp llncs-arxiv.tar.gz rel
+cp acm_preprint.pdf rel
+cp acm_preprint.log rel
 cp acm-arxiv.tar.gz rel
 cp main.docx rel
 cp spellcheck.html rel
