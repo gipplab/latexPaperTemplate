@@ -10,28 +10,29 @@
 \RequirePackage{amsfonts}
 \RequirePackage{amsmath}
 \RequirePackage{authblk}
-\begin{filecontents*}{references.bib}
-@inproceedings{LastnameYYYY,
-  author    = {Only list authors who have committed to contribute
-  significantly to this research project},
-  title        = {Put a temporary title here},
-  booktitle    = {Proceedings of The Web Conference 2020 (WWW '20), April 20--24, 2020, Taipei, Taiwan},
-  doi          = {10.1145/3366423.3380218}
-}
-\end{filecontents*}
-%TODO Update the following line whenever you change the key of the bibtex entry (currently LastnameYYYY) above.
-\newcommand{\theReferenceText}{\fullcite{LastnameYYYY}}
-% Change title header.tex please.
+
+\input{07_reference.tex}
+
 \input{header.tex}
 \addbibresource{references.bib}
-% Change authors in authorsblk.tex for the preprint please.
-\input{authblk.tex}
+
+\title{test}
+
+% Change authors in 05_llncs_authors.tex for the preprint please.
+%\input{05_llncs_authors.tex}
 % Note that each template has very specific requirements on author formatting.
 \begin{document}
   \maketitle
   \thispagestyle{firststyle}
+  
   \begin{abstract}
-    \input{abstract.tex}
+    \input{02_abstract.tex}
   \end{abstract}
-\input{mainmatter.tex}
+  
+\input{03_mainmatter.tex}
+
+\input{06_llncs_acknowledgements.tex}
+
+\printbibliography[keyword=primary]
 \end{document}
+\endinput
