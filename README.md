@@ -26,8 +26,26 @@ Basic steps are
 
 10. submit to arxiv and archive the repo
 
-## 1) Set up and rename the repository
 
+Folder strucutre
+==================
+
+For writing your paper you only need to consider the files with numbers in front `01-08`. The main files are
+* `acm.tex` if you submit to an acm conference with sigconf format
+* `llncs.tex` if you submit to a conference with the LLNCS format
+
+You do not need to change these files. You only need them to compile your paper. To change the content follow this guide:
+1. `01_title.tex` defines the title and short title of the paper. If you do not have a short (running title), just keep it empty.
+2. `02_abstract.tex` contains the abstract of your paper.
+3. `03_mainmatter.tex` contains the entire paper content, with sections, textes, figures, etc.
+4. `04_keywords.tex` contains the keywords for your paper. If you don't have any, just leave it empty.
+5. `05_[acm|llncs]_authors.tex` defines the authors of your paper. Change the file that fits your conference format. For acm use `05_acm_authors.tex`
+6. `06_[acm|llncs]_acknowledgments.tex` defines the acknowledgments. If you dont have any, just the file empty.
+7. `07_reference.tex` once you submit your paper and you want to publish the preprint, change this file according to your reference.
+8. `08_acm_categories.tex` you only need to bother with this file if you submit to an acm conference. In this case, change the categories accordingly.
+
+
+## 1) Set up and rename the repository
 
 To start a new LaTeX paper project, do the following:
 

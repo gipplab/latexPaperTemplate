@@ -1,4 +1,6 @@
 #!/bin/bash
 echo "Generating the arxiv preprints"
 docker run --rm --volume "`pwd`:/data" --user `id -u`:`id -g` aggipp/arxiv-collector llncs_preprint.tex
+mv arxiv.tar.gz llncs-arxiv.tar.gz
 docker run --rm --volume "`pwd`:/data" --user `id -u`:`id -g` aggipp/arxiv-collector acm_preprint.tex
+mv arxiv.tar.gz acm-arxiv.tar.gz

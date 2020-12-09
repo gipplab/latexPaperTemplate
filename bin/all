@@ -10,7 +10,8 @@ source bin/llncs
 echo "Export release files"
 cp preprint.pdf rel
 cp preprint.log rel
-cp arxiv.tar.gz rel
+cp llncs-arxiv.tar.gz rel
+cp acm-arxiv.tar.gz rel
 cp main.docx rel
 cp spellcheck.html rel
 cp acm.pdf rel
