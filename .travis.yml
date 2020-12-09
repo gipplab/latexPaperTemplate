@@ -12,10 +12,10 @@ after_success:
 branches:
   except:
   - "/^paper-[0-9a-z\\-]*/"
-deploy:
-  provider: releases
-  cleanup: false
-  file_glob: true
-  file:
-  - rel/*
-  edge: true
+#deploy:
+#  provider: releases
+#  cleanup: false
+#  file_glob: true
+#  file:
+#  - rel/*
+#  edge: true

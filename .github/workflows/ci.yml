@@ -1,0 +1,43 @@
+name: Build and Deploy
+
+on: 
+  push:
+    branches-ignore:
+      - 'paper-*'
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repo
+        uses: actions/checkout@v2
+      - name: Caching docker
+        uses: satackey/action-docker-layer-caching@v0.0.10
+        continue-on-error: true
+      - name: Build all versions
+        run: source ./bin/travis
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+      - name: Get current branch name
+        id: extract_branch_name
+        run: echo "::set-output name=branch::$(echo ${GITHUB_REF#refs/heads/})"
+      - name: Get current date
+        id: current_date
+        run: echo "::set-output name=date::$(echo $(date -u '+%m-%d'))"
+      - name: Get current date
+        id: current_run_id
+        run: echo "::set-output name=id::$(echo ${GITHUB_RUN_ID})"
+      - name: Build tag id
+        id: build_tag
+        run: echo "::set-output name=tag::$(echo 'paper-${{ steps.extract_branch_name.outputs.branch }}-${{ steps.current_date.outputs.date }}-r${{ steps.current_run_id.outputs.id }}')"
+      - name: Verify generated tag
+        run: echo "${{ steps.build_tag.outputs.tag }}"
+      - name: Upload release assets
+        uses: svenstaro/upload-release-action@v2
+        with:
+          repo_token: ${{ secrets.GITHUB_TOKEN }}
+          tag: ${{ steps.build_tag.outputs.tag }}
+          file: ./rel/*
+          file_glob: true
+          overwrite: true
+          body: "Github Actions Auto-Release"
