@@ -1,0 +1,39 @@
+\documentclass[sigconf,natbib=false,nonacm]{acmart}
+
+\RequirePackage{filecontents}
+\PassOptionsToPackage{dvipsnames}{xcolor}
+\RequirePackage[acm]{comgipp}
+\RequirePackage{amsfonts}
+\RequirePackage{amsmath}
+\RequirePackage{authblk}
+\input{07_reference.tex}
+
+%%
+%% \BibTeX command to typeset BibTeX logo in the docs
+\AtBeginDocument{%
+  \providecommand\BibTeX{{%
+    \normalfont B\kern-0.5em{\scshape i\kern-0.25em b}\kern-0.8em\TeX}}}
+
+%%\citestyle{acmauthoryear}
+\input{header.tex}
+\addbibresource{references.bib}
+%%
+%% end of the preamble, start of the body of the document source.
+\begin{document}
+\input{04_keywords.tex}
+\input{05_acm_authors.tex}
+
+\begin{abstract}
+\input{02_abstract.tex}
+\end{abstract}
+
+\maketitle
+\thispagestyle{firststyle}
+
+\input{03_mainmatter.tex}
+
+\input{06_acm_acknowledgements.tex}
+
+\printbibliography[keyword=primary]
+\end{document}
+\endinput

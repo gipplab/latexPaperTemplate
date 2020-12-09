@@ -6,6 +6,7 @@ source bin/word
 source bin/spellcheck
 source bin/acm
 source bin/llncs
+
 echo "Export release files"
 cp preprint.pdf rel
 cp preprint.log rel

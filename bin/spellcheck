@@ -4,4 +4,4 @@ echo "Generating the spellcheck file"
 # textidote returns the number of errors which might be interpreted as exit code. Logically an exit code different to 0 returns to an error.
 # see here: https://github.com/sylvainhalle/textidote/issues/112#issuecomment-561621053
 # hence it is adviced to ignore the exit code from textidote with || true in the end. Otherwise CI platforms, like Github Actions, may run into problems
-docker run --rm --volume "`pwd`:/data" --user `id -u`:`id -g` aggipp/textidote --check en --dict myWords.txt --output html preprint.tex > spellcheck.html || true
+docker run --rm --volume "`pwd`:/data" --user `id -u`:`id -g` aggipp/textidote --check en --dict config/myWords.txt --output html preprint.tex > spellcheck.html || true
