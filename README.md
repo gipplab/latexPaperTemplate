@@ -3,6 +3,7 @@ LaTeX paper template
 
 This repository serves as a template for LaTeX papers.
 Furthermore, it guides you to the process of writing a scientific paper using LaTeX for a computer science conference or journal.
+The repository contains several different paper formats (acmart, llncs, and preprints). The content is explained below in **Repo Content**.
 
 Basic steps are
 
@@ -27,22 +28,43 @@ Basic steps are
 10. submit to arxiv and archive the repo
 
 
-Folder strucutre
+Repo Content
 ==================
 
-For writing your paper you only need to consider the files with numbers in front `01-08`. The main files are
+For writing your paper you only need to consider the files with numbers in front `01-08`. When ever you push your changes to github, it automatically
+compiles your files (takes about 3min). You find all important files under [releases](/releases).
+
+If you want to compile your files locally, take one the following files:
 * `acm.tex` if you submit to an acm conference with sigconf format
 * `llncs.tex` if you submit to a conference with the LLNCS format
+* `article_preprint.tex` for a preprint version with the article format (one column)
+* `acm_preprint.tex` for the preprint version with the acmart format (two columns)
 
-You do not need to change these files. You only need them to compile your paper. To change the content follow this guide:
-1. `01_title.tex` defines the title and short title of the paper. If you do not have a short (running title), just keep it empty.
+You do not need to change these files in general! All you need to change to edit the content of your paper, edit the files with numbers in front `01-08`.
+If you know you don't need acm, than you can ignore all numbered files followed by `acm`, e.g. `05_acm_authors.tex`. Likewise, if you do not need LLNCS at all,
+you can ignore the files with `llncs` in it.
+
+Here is an explaination for each file:
+1. `01_title.tex` defines the title and short title of the paper. If you do not have a short (also known as running title), just keep it argument for `shortTitle` empty.
 2. `02_abstract.tex` contains the abstract of your paper.
 3. `03_mainmatter.tex` contains the entire paper content, with sections, textes, figures, etc.
-4. `04_keywords.tex` contains the keywords for your paper. If you don't have any, just leave it empty.
-5. `05_[acm|llncs]_authors.tex` defines the authors of your paper. Change the file that fits your conference format. For acm use `05_acm_authors.tex`
-6. `06_[acm|llncs]_acknowledgments.tex` defines the acknowledgments. If you dont have any, just the file empty.
-7. `07_reference.tex` once you submit your paper and you want to publish the preprint, change this file according to your reference.
+4. `04_keywords.tex` contains the keywords for your paper. If you don't have any, simply delete the content of this file.
+5. `05_[acm|llncs]_authors.tex` defines the authors of your paper. Change the file that fits your conference format. For acm use `05_acm_authors.tex`. Unfortunately, the formats are restrictive how to setup authors. Hence, we recommend you change the authors for both `05_acm_authors.tex` and `05_llncs_authors.tex`. Hence, all generated PDFs show the correct authors, also the preprints.
+6. `06_[acm|llncs]_acknowledgments.tex` defines the acknowledgments. If you dont have any, just delete the content of the file.
+7. `07_reference.tex` contains the reference to this paper. This is needed once you want to publish your preprint! Here you enter the bib-reference to your paper. 
 8. `08_acm_categories.tex` you only need to bother with this file if you submit to an acm conference. In this case, change the categories accordingly.
+
+
+**Double Blind:** For double-blind proceedings in acm format, simply the first line in `acm.tex` to: 
+```
+\documentclass[sigconf,natbib=false,anonymous]{acmart}
+```
+
+**Packages:** If you require more packages, add them to `header.tex`. Check the [releases](/releases) on GitHub, when you add more packages. Sometimes there are conflicts that appear in different formats.
+
+**Preprints:** The generated preprints are the official preprint layout from ag-gipp. If you publish your preprints on arxiv, you need to upload only either `article-arxiv.tar.gz` or `acm-arxiv.tar.gz`. They contains all files necessary for arxiv to compile your paper. If you want to check how your preprints look like, simply check the preprint pdfs in [releases](/releases): `article_preprint.pdf` and `acm_preprint.pdf`.
+
+**What are the other files in [releases](/releases)?** You will also find `main.docx` which is a word version of your latex llncs-formatted paper (not acm-formatted). You also find `spellcheck.html` which is a spellchecker also based on your llncs-formatted paper.
 
 
 ## 1) Set up and rename the repository
