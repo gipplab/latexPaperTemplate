@@ -30,7 +30,7 @@ jobs:
       - name: Verify generated tag
         run: echo "${{ steps.build_tag.outputs.tag }}"
       - name: Upload release assets
-        uses: djpohly/upload-release-action@paginate-assets
+        uses: svenstaro/upload-release-action@v2
         with:
           repo_token: ${{ secrets.GITHUB_TOKEN }}
           tag: ${{ steps.build_tag.outputs.tag }}

@@ -277,7 +277,8 @@ TSWLatexianTemp*
 
 # Ignore custom files created by 
 rel
-arxiv.tar.gz
+acm-arxiv.tar.gz
+article-arxiv.tar.gz
 main.docx
 references.bib
 rel
