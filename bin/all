@@ -1,11 +1,11 @@
 #!/bin/bash
 mkdir rel
 echo "Start all compile jobs in parallel"
-source bin/arxiv
-source bin/word
-source bin/spellcheck
-source bin/acm
-source bin/llncs
+source bin/arxiv &
+source bin/word &
+source bin/spellcheck &
+source bin/acm &
+source bin/llncs &
 
 wait
 echo "Export release files"
