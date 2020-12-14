@@ -277,13 +277,15 @@ TSWLatexianTemp*
 
 # Ignore custom files created by 
 rel
-arxiv.tar.gz
+acm-arxiv.tar.gz
+article-arxiv.tar.gz
 main.docx
 references.bib
 rel
 spellcheck.html
 acm.pdf
 llncs.pdf
-preprint.pdf
+acm_preprint.pdf
+article_preprint.pdf
 .deps
-.deps-d
+.deps-*
