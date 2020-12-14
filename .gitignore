@@ -284,6 +284,7 @@ rel
 spellcheck.html
 acm.pdf
 llncs.pdf
-preprint.pdf
+acm_preprint.pdf
+article_preprint.pdf
 .deps
 .deps-d
