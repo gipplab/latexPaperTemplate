@@ -287,4 +287,4 @@ llncs.pdf
 acm_preprint.pdf
 article_preprint.pdf
 .deps
-.deps-d
+.deps-*
