@@ -8,5 +8,10 @@
   doi          = {10.1145/3366423.3380218}
 }
 \end{filecontents*}
+
+\DeclareBibliographyCategory{preprintref}
+\newcommand{\setPreprintRef}[1]{%
+\def\theReferenceText{\fullcite{#1}}\addtocategory{preprintref}{#1}}
+
 %TODO Update the following line whenever you change the key of the bibtex entry (currently LastnameYYYY) above.
-\newcommand{\theReferenceText}{\fullcite{LastnameYYYY}}
+\setPreprintRef{LastnameYYYY}
